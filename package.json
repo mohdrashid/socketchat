@@ -1,0 +1,26 @@
+{
+  "name": "socketchat",
+  "version": "1.0.0",
+  "description": "A socket chat library including addon for authentication",
+  "main": "app.js",
+  "dependencies": {
+    "websocket": "^1.0.23"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ".git"
+  },
+  "keywords": [
+    "socket",
+    "chat",
+    "websocket",
+    "iot",
+    "WS"
+  ],
+  "author": "Mohammed Rashid",
+  "license": "MIT"
+}
