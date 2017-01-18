@@ -76,37 +76,7 @@ listening on port 1337
 
 ## Client-side Example
 
-```html
-
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Sample of web_socket.js</title>
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-
-
-</head>
-<body onload="init();">
-  <div class="login">
-    <form onsubmit="login(); return false;" id="login">
-      <input type="text" id="username" placeholder="username">
-      <input type="password" id="password" placeholder="password">
-      <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
-    </form>
-    <form onsubmit="onSubmit(); return false;" id="message" style="display:none">
-      <input type="text" id="to" placeholder="To">
-      <textarea type="text" id="input" placeholder="message"></textarea>
-      <button type="submit" class="btn btn-primary btn-block btn-large">Send</button><br>
-      <button onclick="onCloseClick(); return false;" class="btn btn-primary btn-block btn-large">close</button>
-    </form>
-    <div id="log" style="color:white;height:300px;overflow-y: auto;overflow-x:hidden;"></div>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-
-  <script type="text/javascript" src="web_socket.js"></script>
-  <script type="text/javascript">
+```js
     var ws;
     function init() {
       ws = new WebSocket("ws://localhost:1337/");
@@ -137,9 +107,7 @@ listening on port 1337
       ws.onerror = function() {
         output("onerror");
       };
-
     }
-
     function onSubmit() {
       var input = document.getElementById("input");
       var to = document.getElementById("to");
@@ -155,7 +123,6 @@ listening on port 1337
       }
 
     }
-
     function login() {
       var username = document.getElementById("username");
       var password = document.getElementById("password");
@@ -164,21 +131,13 @@ listening on port 1337
       data.password=password.value;
       ws.send(JSON.stringify(data));
     }
-
     function onCloseClick() {
       ws.close();
     }
-
     function output(str) {
       var log = document.getElementById("log");
       log.innerHTML = "<strong>"+str + "</strong><br>"+new Date()+"<br><br>" + log.innerHTML;
     }
-
-  </script>
-</body>
-</html>
-
-
 ```
 
 
