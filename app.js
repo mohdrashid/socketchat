@@ -63,6 +63,7 @@ class socketchat extends EventEmitter{
                                     }
                                     catch(e){
                                       var json = JSON.stringify({ type:'Error',message:"Recipient does not exist" });
+                                      currClass.emit('error', "Recipient does not exist");
                                       connection.sendUTF(json);
                                     }
                                     break;
