@@ -170,13 +170,13 @@ Starts listening on the port number passed in the constructor
   * <a href="#authentication"><code><b>authentication</b></code></a>
   * <a href="#message"><code><b>message</b></code></a>
   * <a href="#error"><code><b>error</b></code></a>
-
-
+  
 -------------------------------------------------------
 <a name="listen"></a>
 ## listen
 
 Emitted when starting to listen
+
 -------------------------------------------------------
 <a name="authentication"></a>
 ### authentication
@@ -186,6 +186,7 @@ socketchat.on('authentication',function(origin,stat){
 });
 stat is a JSON in the format: {type:'authentication',status:'success'} if authentication is successful
 otherwise  {type:'authentication',status:'fail'}
+
 -------------------------------------------------------
 <a name="message"></a>
 ### message
@@ -193,11 +194,13 @@ otherwise  {type:'authentication',status:'fail'}
 Emitted whenever a user sends message.
 Messages are in the format:
 {type:'message',to:'username',message:'xyz'}
+
 -------------------------------------------------------
 <a name="error"></a>
 ### error
 
 Emitted when error occurs.
+
 -------------------------------------------------------
 
 <a name="license"></a>
