@@ -1,4 +1,4 @@
-var socketchatlib=require('./app.js');
+var socketchatlib=require('./index.js');
 //Sample users list
 var users={
   //"username":"password"

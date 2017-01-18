@@ -2,7 +2,7 @@
   "name": "socketchat",
   "version": "1.0.2",
   "description": "A socket chat library including addon for authentication",
-  "main": "app.js",
+  "main": "index.js",
   "dependencies": {
     "websocket": "^1.0.23"
   },
