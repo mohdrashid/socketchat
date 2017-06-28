@@ -41,7 +41,7 @@ var users={
 };
 //Sample Authentication function
 var auth=function(username,password){
-  return (users[username]==password)
+  return (users[username]===password)
 }
 //Creating a object of the library.
 //Passing portnumber and authentication function
@@ -89,15 +89,15 @@ listening on port 1337
         // e.data contains received string.
         var json=JSON.parse(e.data);
         console.log(json);
-        if(json.type=='authentication'&&json.status=='success')
+        if(json.type==='authentication'&&json.status==='success')
         {
           document.getElementById("login").style.display = "none";
           document.getElementById("message").style.display = "block";
         }
-        else if(json.type=='authentication'&&json.status=='fail'){
+        else if(json.type==='authentication'&&json.status==='fail'){
           output("Login Failed");
         }
-        else if(json.type=='message'){
+        else if(json.type==='message'){
           output("Message from " + json.from+" : "+json.message);
         }
       };
