@@ -8,7 +8,7 @@ var users={
 };
 //Sample Authentication function
 var auth=function(username,password){
-  return (users[username]==password)
+  return (users[username]===password)
 }
 //Creating a object of the library.
 //Passing portnumber and authentication function
